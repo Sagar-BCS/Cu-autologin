@@ -1,0 +1,21 @@
+{
+    "name": "CU Auto Login",
+    "version": "1.0.0",
+    "description": "Nothing",
+    "manifest_version": 2,
+    "author": "Sagar",
+    "content_scripts":[
+        {
+            "matches":["http://172.15.15.1:1000/login?"],
+            "js":["form.js"]
+        }
+    ],
+    "background": {
+        "scripts": ["background.js"]
+      },
+    "permissions":[
+        "tabs",
+        "activeTab",
+        "*://*/*"
+    ]
+}
